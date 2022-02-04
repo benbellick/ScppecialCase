@@ -1,4 +1,11 @@
 #include <cassert>
+/*
+ * Question: How do we properly initialize a const static variable of a pure virtual class?
+ *
+ * Answer: We can do so prior to the main function and prior to any instantiation of its derived classes.
+ *
+ * Why: This can be useful as a 'global' configuration for all derived classes of the pure virtual class.
+ */
 class PureVirtual {
     public:
         PureVirtual() {};
